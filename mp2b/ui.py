@@ -92,6 +92,12 @@ class M2B_PT_Main(bpy.types.Panel):
             if state.cv2 is None:
                 col.label(text="OpenCV not available: MJPEG will NOT work", icon='ERROR')
 
+        box3 = l.box()
+        box3.label(text="Armature Retargeting")
+        box3.prop(sc, "m2b_target_armature")
+        if sc.m2b_target_armature:
+            box3.operator("m2b.setup_rigging", text="Setup MP2B Rigging for Armature")
+
         # stats (best-effort)
         try:
             with state._stats_lock:

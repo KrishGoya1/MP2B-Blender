@@ -187,6 +187,12 @@ def register_props():
 
     bpy.types.Scene.m2b_running = bpy.props.BoolProperty(default=False)
 
+    bpy.types.Scene.m2b_target_armature = bpy.props.PointerProperty(
+        name="Target Armature",
+        type=bpy.types.Object,
+        poll=lambda self, obj: obj.type == 'ARMATURE'
+    )
+
     # Timer cfg sync (worker reads cfg snapshot)
     try:
         if not bpy.app.timers.is_registered(_sync_cfg_from_scene):
@@ -232,6 +238,7 @@ def unregister_props():
         "m2b_shm_name",
         "m2b_mjpeg_url",
         "m2b_running",
+        "m2b_target_armature",
     ]:
         if hasattr(bpy.types.Scene, p):
             try:

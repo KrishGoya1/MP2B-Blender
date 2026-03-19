@@ -104,6 +104,7 @@ def process_updates():
             continue
 
         vis = visible_snapshot.get(key, True)
+        
         obj.hide_viewport = not vis
         obj.hide_render = not vis
         if not vis:

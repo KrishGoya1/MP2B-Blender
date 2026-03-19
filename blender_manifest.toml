@@ -1,0 +1,19 @@
+schema_version = "1.0.0"
+
+id = "mp2b_mediapipe2blender"
+version = "0.0.1"
+name = "MediaPipe 2 Blender (MP2B)"
+tagline = "MediaPipe tracking via UDP + camera feed (SHM/MJPEG)"
+maintainer = "Tommaso Malaisi"
+website = "https://tommasomalaisi.com"
+
+type = "add-on"
+blender_version_min = "4.0.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+wheels = [
+  "./wheels/opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl",
+  "./wheels/opencv_python-4.12.0.88-cp37-abi3-macosx_13_0_arm64.whl",
+  "./wheels/opencv_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+]

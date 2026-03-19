@@ -1,0 +1,43 @@
+MP2B Extension – Third Party Licenses
+===================================
+
+This Blender Extension bundles third-party Python packages ("wheels").
+These components are NOT covered by the GPL license of MP2B itself.
+
+--------------------------------------------------
+
+opencv-python
+License: MIT License
+Copyright (c) OpenCV contributors
+https://github.com/opencv/opencv-python
+
+The opencv-python package itself is licensed under the MIT License.
+It bundles OpenCV, which is licensed under the Apache License 2.0.
+Some third-party components bundled with OpenCV may be licensed under
+other permissive licenses (BSD, MIT, zlib).
+
+--------------------------------------------------
+
+Bundled wheels:
+- opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl
+- opencv_python-4.12.0.88-cp37-abi3-macosx_13_0_arm64.whl
+- opencv_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.whl
+
+--------------------------------------------------
+
+Runtime dependencies (not bundled):
+
+NumPy
+License: BSD 3-Clause License
+Copyright (c) NumPy Developers
+https://numpy.org/
+
+NumPy is provided by Blender’s Python environment and is not bundled
+with this extension.
+
+--------------------------------------------------
+
+MP2B Extension itself is licensed under:
+GNU General Public License v3.0 or later (GPL-3.0-or-later)
+
+Copyright (c) 2025 Tommaso Malaisi
